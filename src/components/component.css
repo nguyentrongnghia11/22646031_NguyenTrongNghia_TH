@@ -1,0 +1,10 @@
+.btn-outline-pink {
+    border-color: #f06292; /* Màu hồng */
+    color: #f06292; /* Màu chữ hồng */
+  }
+  
+  .btn-outline-pink:hover {
+    background-color: #f06292; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+  }
+  

@@ -1,0 +1,68 @@
+{
+  "overview": {
+    "turnover": 92405,
+    "profit": 32218,
+    "newCustomer": 298,
+    "turnoverChange": 5.33,
+    "profitChange": 5.33,
+    "newCustomerChange": 6.84
+  },
+  "customers": [
+    {
+      "id": "1",
+      "name": "Elizabeth Lee",
+      "company": "AvatarSystems",
+      "orderValue": 539,
+      "orderDate": "10/07/2023",
+      "status": "New"
+    },
+    {
+      "id": "2",
+      "name": "Carlos Garcia",
+      "company": "SnoozeShift",
+      "orderValue": 574,
+      "orderDate": "24/07/2023",
+      "status": "New"
+    },
+    {
+      "id": "3",
+      "name": "Elizabeth Bailey",
+      "company": "Prime Time Telecom",
+      "orderValue": 564,
+      "orderDate": "08/08/2023",
+      "status": "In-progress"
+    },
+    {
+      "id": "4",
+      "name": "Ryan Brown",
+      "company": "OmniTech Corporation",
+      "orderValue": 541,
+      "orderDate": "31/08/2023",
+      "status": "In-progress"
+    },
+    {
+      "id": "5",
+      "name": "Ryan Young",
+      "company": "DataStream Inc",
+      "orderValue": 579,
+      "orderDate": "01/09/2023",
+      "status": "Completed"
+    },
+    {
+      "id": "6",
+      "name": "Hailey Adams",
+      "company": "FlowRush",
+      "orderValue": 922,
+      "orderDate": "10/10/2023",
+      "status": "Completed"
+    },
+    {
+      "id": "7dda",
+      "name": "Nguyễn Trọng Nghĩa",
+      "company": "thai son",
+      "orderValue": "3",
+      "orderDate": "",
+      "status": ""
+    }
+  ]
+}
