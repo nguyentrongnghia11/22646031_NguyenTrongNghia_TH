@@ -10,17 +10,34 @@ import avt5 from '../assets/Lab_05/Avatar5.png';
 import '../components/component.css'
 
 function DataTable({ onEdit, onAdd }) {
+  const [customers, setCustomers] = useState([]);
 
+
+  var arr = [avt1, avt2, avt3, avt4, avt5]
+
+  useEffect(() => {
+    fetchTableData();
+  }, []);
+
+  async function fetchTableData() {
+    try {
+      const response = await axios.get('http://localhost:3001/customers');
+      setCustomers(response.data);
+    } catch (error) {
+      alert("Chạy lênh: npx json-server --watch public/db.json --port 3001")
+      console.error('Error fetching table data:', error);
+    }
+  }
 
   return (
     <div className="container mt-4">
       <div className="d-flex justify-content-between mb-3">
-        <h3 style={{color: "#f54983"}}>Detailed Report</h3>
+        <h3 style={{ color: "#f54983" }}>Detailed Report</h3>
         <div>
           <button className="btn btn-outline-pink me-2">Import</button>
           <button className="btn btn-outline-pink me-2">Export</button>
-          <button className="btn btn-primary" >Add User</button>
-          {/* onClick={onAdd} */}
+          <button className="btn btn-primary" onClick={onAdd}>Add User</button>
+
         </div>
       </div>
       <div className="table-responsive">
@@ -36,7 +53,7 @@ function DataTable({ onEdit, onAdd }) {
             </tr>
           </thead>
           <tbody>
-            {/* {customers.map((row) => (
+            {customers.map((row) => (
               <tr key={row.id}>
                 <td className="d-flex align-items-center">
                   <input type="checkbox" className="me-2" />
@@ -73,7 +90,7 @@ function DataTable({ onEdit, onAdd }) {
                   </button>
                 </td>
               </tr>
-            ))} */}
+            ))}
           </tbody>
         </table>
       </div>
