@@ -2,29 +2,29 @@ import { useState } from 'react';
 import axios from 'axios';
 
 function AddModal({ onClose, onAdd }) {
-  // const [newCustomer, setNewCustomer] = useState({
-  //   name: '',
-  //   company: '',
-  //   orderValue: 0,
-  //   orderDate: '',
-  //   status: ''
-  // });
+  const [newCustomer, setNewCustomer] = useState({
+    name: '',
+    company: '',
+    orderValue: 0,
+    orderDate: '',
+    status: ''
+  });
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setNewCustomer((prev) => ({ ...prev, [name]: value }));
-  // };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewCustomer((prev) => ({ ...prev, [name]: value }));
+  };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await axios.post('http://localhost:3000/customers', newCustomer);
-  //     onAdd();
-  //     onClose();
-  //   } catch (error) {
-  //     console.error('Error adding customer:', error);
-  //   }
-  // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:3001/customers', newCustomer);
+      onAdd();
+      onClose();
+    } catch (error) {
+      console.error('Error adding customer:', error);
+    }
+  };
 
   return (
     <div className="modal fade show d-block" tabIndex="-1" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>

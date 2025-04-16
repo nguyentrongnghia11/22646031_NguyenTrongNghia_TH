@@ -5,16 +5,14 @@ import logo from '../assets/Lab_05/Image 1858.png'
 function Sidebar() {
     return (
         <div className="col-auto bg-light vh-100 p-4" style={{ width: '250px' }}>
-            <img  className='' src={logo} alt="" />
-            
+            <img className='' src={logo} alt="" />
+
             <ul className="nav flex-column mt-4">
                 <li className="nav-item">
                     <NavLink
                         to="/dashboard"
-                        className={({ isActive }) =>
-                            isActive ? 'nav-link active text-white rounded' : 'nav-link text-dark'
-                        }
-                        style={({ isActive }) => (isActive ? { backgroundColor: '#f54983' } : {})}
+                        className="nav-link active text-white rounded"
+                        style={{ backgroundColor: '#f54983' }}
                     >
                         Dashboard
                     </NavLink>
@@ -22,10 +20,7 @@ function Sidebar() {
                 <li className="nav-item">
                     <NavLink
                         to="/projects"
-                        className={({ isActive }) =>
-                            isActive ? 'nav-link active text-white rounded' : 'nav-link text-dark'
-                        }
-                        style={({ isActive }) => (isActive ? { backgroundColor: '#f54983' } : {})}
+                        className="nav-link text-dark"
                     >
                         Projects
                     </NavLink>
@@ -33,10 +28,7 @@ function Sidebar() {
                 <li className="nav-item">
                     <NavLink
                         to="/teams"
-                        className={({ isActive }) =>
-                            isActive ? 'nav-link active text-white rounded' : 'nav-link text-dark'
-                        }
-                        style={({ isActive }) => (isActive ? { backgroundColor: '#f54983' } : {})}
+                        className="nav-link text-dark"
                     >
                         Teams
                     </NavLink>
@@ -44,10 +36,7 @@ function Sidebar() {
                 <li className="nav-item">
                     <NavLink
                         to="/analytics"
-                        className={({ isActive }) =>
-                            isActive ? 'nav-link active text-white rounded' : 'nav-link text-dark'
-                        }
-                        style={({ isActive }) => (isActive ? { backgroundColor: '#f54983' } : {})}
+                        className="nav-link text-dark"
                     >
                         Analytics
                     </NavLink>
@@ -55,10 +44,7 @@ function Sidebar() {
                 <li className="nav-item">
                     <NavLink
                         to="/messages"
-                        className={({ isActive }) =>
-                            isActive ? 'nav-link active text-white rounded' : 'nav-link text-dark'
-                        }
-                        style={({ isActive }) => (isActive ? { backgroundColor: '#f54983' } : {})}
+                        className="nav-link text-dark"
                     >
                         Messages
                     </NavLink>
@@ -66,15 +52,13 @@ function Sidebar() {
                 <li className="nav-item">
                     <NavLink
                         to="/integrations"
-                        className={({ isActive }) =>
-                            isActive ? 'nav-link active text-white rounded' : 'nav-link text-dark'
-                        }
-                        style={({ isActive }) => (isActive ? { backgroundColor: '#f54983' } : {})}
+                        className="nav-link text-dark"
                     >
                         Integrations
                     </NavLink>
                 </li>
             </ul>
+
 
             <div className="mt-5 d-flex flex-column" >
                 <img className='mt-5' src={anh} alt="" />
