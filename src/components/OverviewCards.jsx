@@ -7,7 +7,20 @@ import c from '../assets/Lab_05/Button 1530.png';
 function OverviewCards() {
     const [overview, setOverview] = useState(null);
 
-    
+    useEffect(() => {
+        async function fetchOverviewData() {
+            try {
+                const response = await axios.get('http://localhost:3001/overview');
+                setOverview(response.data);
+            } catch (error) {
+                alert("Chạy Json server:   npx json-server --watch public/db.json --port 3001")
+                console.error('Error fetching overview data:', error);
+            }
+        }
+        fetchOverviewData();
+    }, []);
+
+    if (!overview) return <div>Loading...</div>;
 
     return (
         <div className="container mt-4">
