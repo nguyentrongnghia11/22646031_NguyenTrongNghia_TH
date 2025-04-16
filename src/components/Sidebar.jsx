@@ -60,6 +60,7 @@ function Sidebar() {
             </ul>
 
 
+
             <div className="mt-5 d-flex flex-column" >
                 <img className='mt-5' src={anh} alt="" />
                 <button className='btn btn-outline-primary mt-2' >Try now</button>
